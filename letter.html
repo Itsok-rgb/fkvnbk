@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💌 Love Letter - For Jaan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page active" id="letterPage">
+        <div class="final-bg"></div>
+        
+        <nav class="page-nav">
+            <a href="treasure.html" class="nav-link">💎 Previous</a>
+            <a href="index.html" class="nav-link">🏠 Home</a>
+        </nav>
+        
+        <div class="page-content">
+            <div class="love-letter-container">
+                <div class="letter-paper" id="loveLetter">
+                    <div class="letter-header">
+                        <h2 class="letter-greeting">My Dearest Jaan,</h2>
+                    </div>
+                    <div class="letter-body">
+                        <p class="letter-paragraph">On this special Valentine's Day, I wanted to create something magical just for you.</p>
+                        <p class="letter-paragraph">You are not just my love, you are my everything - my sunshine, my star, my ocean, my treasure.</p>
+                        <p class="letter-paragraph highlight">Every moment with you feels like magic, and every day I fall in love with you all over again.</p>
+                        <p class="letter-paragraph">You make my world colorful, beautiful, and full of joy.</p>
+                        <p class="letter-paragraph">Thank you for being you, my beautiful Jaan.</p>
+                        <p class="letter-paragraph">I love you more than words can express, more than stars in the sky, more than waves in the ocean.</p>
+                        <p class="letter-signature">Forever yours,<br>With all my love 💕</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="final-surprises">
+                <h2 class="surprises-title">More Surprises for You! ✨</h2>
+                <div class="surprises-grid">
+                    <button class="surprise-final-btn" id="finalSurprise1">
+                        <span class="btn-icon">🎆</span>
+                        <span class="btn-text">Fireworks</span>
+                    </button>
+                    <button class="surprise-final-btn" id="finalSurprise2">
+                        <span class="btn-icon">💐</span>
+                        <span class="btn-text">Flowers</span>
+                    </button>
+                    <button class="surprise-final-btn" id="finalSurprise3">
+                        <span class="btn-icon">💖</span>
+                        <span class="btn-text">Hearts</span>
+                    </button>
+                    <button class="surprise-final-btn" id="finalSurprise4">
+                        <span class="btn-icon">✨</span>
+                        <span class="btn-text">Magic</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            createConfetti(30);
+            createParticles(window.innerWidth / 2, window.innerHeight / 2, 50);
+            
+            document.getElementById('finalSurprise1')?.addEventListener('click', () => {
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => {
+                        createFirework(
+                            Math.random() * window.innerWidth,
+                            Math.random() * window.innerHeight * 0.5
+                        );
+                    }, i * 200);
+                }
+                createConfetti(100);
+            });
+            
+            document.getElementById('finalSurprise2')?.addEventListener('click', () => {
+                createFlowerRain();
+                createConfetti(50);
+            });
+            
+            document.getElementById('finalSurprise3')?.addEventListener('click', () => {
+                createHeartRain();
+                createConfetti(50);
+            });
+            
+            document.getElementById('finalSurprise4')?.addEventListener('click', () => {
+                createMagicEffect();
+                createConfetti(100);
+                createParticles(window.innerWidth / 2, window.innerHeight / 2, 200);
+            });
+        });
+    </script>
+</body>
+</html>
