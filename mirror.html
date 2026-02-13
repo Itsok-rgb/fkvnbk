@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪞 Magic Mirror - For Jaan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page active" id="mirrorPage">
+        <div class="magic-bg"></div>
+        
+        <nav class="page-nav">
+            <a href="ocean.html" class="nav-link">🌊 Previous</a>
+            <a href="index.html" class="nav-link">🏠 Home</a>
+            <a href="treasure.html" class="nav-link">💎 Next</a>
+        </nav>
+        
+        <div class="page-content">
+            <div class="mirror-container">
+                <div class="magic-mirror" id="magicMirror">
+                    <div class="mirror-frame">
+                        <div class="mirror-glass">
+                            <div class="mirror-content">
+                                <h2 class="mirror-title">Magic Mirror</h2>
+                                <p class="mirror-question">Who is the most beautiful person in the world?</p>
+                                <button class="mirror-btn" id="mirrorBtn">Ask the Mirror ✨</button>
+                                <div class="mirror-answer" id="mirrorAnswer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-section">
+                <h2 class="section-title">Ask the Magic Mirror! 🪞</h2>
+                <p class="section-text">Click the button to ask the mirror a question and see what it reveals!</p>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('mirrorBtn')?.addEventListener('click', () => {
+                const answer = document.getElementById('mirrorAnswer');
+                if (!answer) return;
+                
+                answer.innerHTML = `
+                    <div style="font-size: 2rem; color: #ff006e; font-weight: 700;">
+                        It's you, Jaan! ✨<br>
+                        You are the most beautiful person in the world! 💕
+                    </div>
+                `;
+                
+                createConfetti(50);
+                createParticles(window.innerWidth / 2, window.innerHeight / 2, 100);
+                createFirework(window.innerWidth / 2, window.innerHeight / 2);
+            });
+        });
+    </script>
+</body>
+</html>
