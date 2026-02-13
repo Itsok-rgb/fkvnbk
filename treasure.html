@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💎 Treasure Chest - For Jaan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page active" id="treasurePage">
+        <div class="treasure-bg"></div>
+        
+        <nav class="page-nav">
+            <a href="mirror.html" class="nav-link">🪞 Previous</a>
+            <a href="index.html" class="nav-link">🏠 Home</a>
+            <a href="letter.html" class="nav-link">💌 Next</a>
+        </nav>
+        
+        <div class="page-content">
+            <div class="treasure-container">
+                <h1 class="page-title">💎 Treasure of Love 💎</h1>
+                <div class="treasure-chest" id="treasureChest">
+                    <div class="chest-lid"></div>
+                    <div class="chest-body">
+                        <div class="treasure-content" id="treasureContent">
+                            <div class="treasure-item">💖</div>
+                            <div class="treasure-item">💕</div>
+                            <div class="treasure-item">💗</div>
+                            <div class="treasure-item">💝</div>
+                            <div class="treasure-item">💘</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="treasure-hint">Click the chest to open your treasure!</p>
+                
+                <div class="page-section">
+                    <h2 class="section-title">Hidden Treasures! 💎</h2>
+                    <p class="section-text">Inside this chest are all the treasures of my heart, Jaan!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('treasureChest')?.addEventListener('click', () => {
+                const chest = document.getElementById('treasureChest');
+                if (!chest) return;
+                
+                if (!chest.classList.contains('open')) {
+                    chest.classList.add('open');
+                    createConfetti(100);
+                    createParticles(window.innerWidth / 2, window.innerHeight / 2, 150);
+                    
+                    setTimeout(() => {
+                        createFirework(window.innerWidth / 2, window.innerHeight / 2);
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
