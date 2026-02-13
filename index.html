@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Welcome - For My Jaan 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="heart-loader">💕</div>
+            <p class="loader-text">Preparing something magical for Jaan...</p>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div class="page active" id="homePage">
+        <div class="stars-animated"></div>
+        <div class="moon"></div>
+        <div class="clouds"></div>
+        
+        <div class="page-content">
+            <div class="main-hero">
+                <h1 class="hero-title">
+                    <span class="letter" data-letter="F">F</span>
+                    <span class="letter" data-letter="O">O</span>
+                    <span class="letter" data-letter="R</span>
+                    <span class="letter-space"></span>
+                    <span class="letter" data-letter="M">M</span>
+                    <span class="letter" data-letter="Y">Y</span>
+                    <span class="letter-space"></span>
+                    <span class="letter special" data-letter="J">J</span>
+                    <span class="letter special" data-letter="A">A</span>
+                    <span class="letter special" data-letter="A">A</span>
+                    <span class="letter special" data-letter="N">N</span>
+                </h1>
+                <p class="hero-subtitle">A Magical Journey Awaits...</p>
+                <div class="navigation-menu">
+                    <a href="garden.html" class="nav-card">
+                        <div class="nav-icon">🌺</div>
+                        <h3>Garden of Love</h3>
+                        <p>Explore beautiful flowers</p>
+                    </a>
+                    <a href="stars.html" class="nav-card">
+                        <div class="nav-icon">⭐</div>
+                        <h3>Starry Sky</h3>
+                        <p>Under the stars</p>
+                    </a>
+                    <a href="ocean.html" class="nav-card">
+                        <div class="nav-icon">🌊</div>
+                        <h3>Ocean of Emotions</h3>
+                        <p>Messages in bottles</p>
+                    </a>
+                    <a href="mirror.html" class="nav-card">
+                        <div class="nav-icon">🪞</div>
+                        <h3>Magic Mirror</h3>
+                        <p>Ask the mirror</p>
+                    </a>
+                    <a href="treasure.html" class="nav-card">
+                        <div class="nav-icon">💎</div>
+                        <h3>Treasure Chest</h3>
+                        <p>Open the treasure</p>
+                    </a>
+                    <a href="letter.html" class="nav-card">
+                        <div class="nav-icon">💌</div>
+                        <h3>Love Letter</h3>
+                        <p>Read my heart</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-elements">
+            <div class="floating-heart" style="--delay: 0s; --duration: 3s; --x: 10%;">💖</div>
+            <div class="floating-heart" style="--delay: 0.5s; --duration: 4s; --x: 30%;">💕</div>
+            <div class="floating-heart" style="--delay: 1s; --duration: 3.5s; --x: 50%;">💗</div>
+            <div class="floating-heart" style="--delay: 1.5s; --duration: 4s; --x: 70%;">💝</div>
+            <div class="floating-heart" style="--delay: 2s; --duration: 3s; --x: 90%;">💘</div>
+        </div>
+    </div>
+
+    <!-- Particle System -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
