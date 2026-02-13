@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⭐ Starry Sky - For Jaan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page active" id="starsPage">
+        <canvas id="starCanvas"></canvas>
+        
+        <nav class="page-nav">
+            <a href="garden.html" class="nav-link">🌺 Previous</a>
+            <a href="index.html" class="nav-link">🏠 Home</a>
+            <a href="ocean.html" class="nav-link">🌊 Next</a>
+        </nav>
+        
+        <div class="page-content">
+            <div class="message-box">
+                <h1 class="page-title">⭐ Under the Stars ⭐</h1>
+                <p class="page-message">
+                    Jaan, you shine brighter than all the stars combined!<br>
+                    Click on the stars to create constellations of love! ✨
+                </p>
+                <div class="constellation-container" id="constellation"></div>
+                
+                <div class="page-section">
+                    <h2 class="section-title">Create Your Constellation! 🌟</h2>
+                    <p class="section-text">Click each star to see fireworks and create beautiful patterns!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            initializeStars();
+        });
+    </script>
+</body>
+</html>
