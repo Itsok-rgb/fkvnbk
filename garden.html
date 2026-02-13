@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌺 Garden of Love - For Jaan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page active" id="gardenPage">
+        <div class="garden-bg">
+            <div class="flower flower-1">🌸</div>
+            <div class="flower flower-2">🌺</div>
+            <div class="flower flower-3">🌻</div>
+            <div class="flower flower-4">🌹</div>
+            <div class="flower flower-5">🌷</div>
+            <div class="flower flower-6">🌼</div>
+            <div class="butterfly butterfly-1">🦋</div>
+            <div class="butterfly butterfly-2">🦋</div>
+        </div>
+        
+        <nav class="page-nav">
+            <a href="index.html" class="nav-link">🏠 Home</a>
+            <a href="stars.html" class="nav-link">⭐ Next</a>
+        </nav>
+        
+        <div class="page-content">
+            <div class="message-box">
+                <h1 class="page-title">🌺 Garden of Love 🌺</h1>
+                <p class="page-message">
+                    Welcome to a garden where every flower blooms for you, Jaan!<br>
+                    Your beauty makes even the most beautiful flowers jealous! 💐
+                </p>
+                <div class="interactive-flowers" id="flowerGarden"></div>
+                
+                <div class="page-section">
+                    <h2 class="section-title">Click the flowers to see magic! ✨</h2>
+                    <p class="section-text">Each flower has a special surprise waiting for you!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize garden page
+        window.addEventListener('load', () => {
+            initializeGarden();
+        });
+    </script>
+</body>
+</html>
